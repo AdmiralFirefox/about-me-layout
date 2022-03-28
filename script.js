@@ -17,7 +17,7 @@ const hidePanels = () => {
 };
 
 for (let i = 0; i < accHeading.length; i++) {
-  accHeading[i].onclick = function () {
+  accHeading[i].onclick = () => {
     if (accHeading[i].nextElementSibling.style.maxHeight) {
       hidePanels();
     } else {
