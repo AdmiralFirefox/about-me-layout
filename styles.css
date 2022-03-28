@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --black-color: #151515;
   --light-orange: #f8a145;
   --orange: #f07900;
@@ -40,7 +41,7 @@ header > nav > a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.2em 1.5em 4em 1.5em;
+  margin: 1.2em 1.5em 6em 1.5em;
 }
 
 .about-me-section div:first-child {
@@ -146,7 +147,7 @@ header > nav > a:hover {
 /* Question and Answer Section */
 .question-and-answer-section {
   margin-top: 0em;
-  margin-bottom: 5em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,4 +218,10 @@ header > nav > a:hover {
   color: var(--white-color);
   line-height: 1.7em;
   font-size: 1.1rem;
+}
+
+/* Wave Section */
+footer {
+  height: 13em;
+  overflow: hidden;
 }
