@@ -74,6 +74,7 @@ header > nav > a:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  animation: slide-in-bottom 1.3s ease-in-out both;
 }
 
 .about-me-section section h1::after {
@@ -84,6 +85,7 @@ header > nav > a:hover {
   position: relative;
   right: 1.9em;
   top: 0.2em;
+  animation: slide-in-bottom 1.3s ease-in-out both;
 }
 
 .about-me-section section p {
@@ -92,11 +94,13 @@ header > nav > a:hover {
   font-size: 1.1rem;
   font-weight: 400;
   text-align: center;
+  animation: slide-in-bottom 1.3s ease-in-out both;
 }
 
 .about-me-section section .social-links {
   margin-top: 2.3em;
   text-align: center;
+  animation: slide-in-bottom 1.3s ease-in-out both;
 }
 
 .about-me-section section .social-links a {
@@ -109,6 +113,17 @@ header > nav > a:hover {
 
 .about-me-section section .social-links a:hover {
   color: var(--orange-hover);
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 46em) {
