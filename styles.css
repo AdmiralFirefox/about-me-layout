@@ -4,6 +4,7 @@
   --orange: #f07900;
   --orange-hover: hsl(30, 100%, 65%);
   --dark-orange: #d35100;
+  --dark-orange-hover: hsl(23, 100%, 55%);
   --white-color: #fff;
 }
 
@@ -140,4 +141,80 @@ header > nav > a:hover {
   .about-me-section section .social-links a:first-of-type {
     margin-left: 0em;
   }
+}
+
+/* Question and Answer Section */
+.question-and-answer-section {
+  margin-top: 0em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-and-answer-section h1 {
+  color: var(--white-color);
+  font-size: 2.1rem;
+  text-align: center;
+  margin: 0em 1.5em 1em 1.5em;
+}
+
+.question-and-answer-section .question-and-answer-content {
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 50em);
+}
+
+.question-and-answer-section .question-and-answer-content .accordion {
+  background: var(--dark-orange);
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1.1em;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-and-answer-section .question-and-answer-content .active,
+.question-and-answer-section .question-and-answer-content .accordion:hover {
+  background: var(--dark-orange);
+}
+
+.question-and-answer-section .question-and-answer-content .accordion:after {
+  content: "\002B";
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-left: 0.7em;
+}
+
+.question-and-answer-section .question-and-answer-content .active:after {
+  content: "\2212";
+  color: var(--white-color);
+  font-size: 1.3rem;
+  margin-left: 0.7em;
+}
+
+.question-and-answer-section .question-and-answer-content .panel {
+  background: var(--dark-orange);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 1.5em;
+  user-select: none;
+}
+
+.question-and-answer-section .question-and-answer-content .panel p {
+  padding: 0em 1.2em 1.2em 1.2em;
+  width: 100%;
+  color: var(--white-color);
+  line-height: 1.7em;
+  font-size: 1.1rem;
 }
