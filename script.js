@@ -1,13 +1,27 @@
-const accordionContent = document.getElementsByClassName("accordion");
+const accHeading = document.querySelectorAll(".accordion");
+const accPanel = document.querySelectorAll(".panel");
 
-for (let i = 0; i < accordionContent.length; i++) {
-  accordionContent[i].addEventListener("click", () => {
-    accordionContent[i].classList.toggle("active");
-    let panel = accordionContent[i].nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+// Function that shows a Panel
+const showPanel = (elem) => {
+  hidePanels();
+  elem.classList.add("active");
+  elem.nextElementSibling.style.maxHeight = `${elem.nextElementSibling.scrollHeight}px`;
+};
+
+// Function that hides all shown Panels
+const hidePanels = () => {
+  for (let i = 0; i < accPanel.length; i++) {
+    accPanel[i].style.maxHeight = null;
+    accHeading[i].classList.remove("active");
+  }
+};
+
+for (let i = 0; i < accHeading.length; i++) {
+  accHeading[i].onclick = function () {
+    if (accHeading[i].nextElementSibling.style.maxHeight) {
+      hidePanels();
     } else {
-      panel.style.maxHeight = `${panel.scrollHeight}px`;
+      showPanel(accHeading[i]);
     }
-  });
+  };
 }
